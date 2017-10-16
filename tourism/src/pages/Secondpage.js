@@ -13,6 +13,14 @@ export class Secondpage extends React.Component {
                             <span class="text">TOURISM</span>
                         </div>
                     </div>
+                    <div class="row centered">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8 d">
+                            <span class="step1">Step 1</span><br/>
+                            <span class="days">How many days do you need to travel in Ulaanbaatar ?</span>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
                 </div>
             </div>
         );

@@ -7,10 +7,13 @@
   padding-top: 1em; }
 
 .text {
-  font-family: Roboto, sans-serif;
-  font-size: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
   font-weight: 500;
   color: #A08A58; }
 
 .cloud_wrapper {
-  padding-top: 1em; }
+  padding-top: 0em; }
+
+.centered {
+  text-align: center; }
