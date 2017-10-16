@@ -5,40 +5,8 @@ $color4 : #E5C875;
 $color5 : #FFF6E3;
 $font : "Roboto";
 
-$min_width: 768px;
-$max_width: 1928px;
-$min_font: 16px;
-$max_font: 24px;
-
-// responsive text using mixin
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size !important;
-      }
-    }
-  }
-}
-
 body {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-family: $font, sans-serif;
 }
 
 .Secondpage {
@@ -51,7 +19,7 @@ body {
 }
 
 .cloud_wrapper {
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .header-wrapper {
@@ -60,13 +28,10 @@ body {
 }
 
 .header-txt {
-  font-family: $font, sans-serif;
-  font-size: 42px;
+  font-size: 2.5rem;
   font-weight: 500;
   color: $color2;
 }
-
-
 
 .step1 {
 
