@@ -9,17 +9,18 @@ $color5 : #FFF6E3;
   background-color: $color5;
 }
 
-.header {
+.wrapper {
   text-align: center;
+  padding-top: 1em;
 }
 
-.header-text {
+.text {
   font-family: Roboto, sans-serif;
   font-size: 45px;
   font-weight: 500;
   color: $color2;
 }
 
-.cloud {
-  height: 200px;
+.cloud_wrapper {
+  padding-top: 1em;
 }
