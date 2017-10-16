@@ -23,7 +23,7 @@ export class Secondpage extends React.Component {
                 <div class="container-fluid footer-img">
                     <div class="row">
                         <div class="col-12">
-                            <img src="assets/Asset 7.svg"/>
+                            <img src="assets/Asset 8.svg"/>
                         </div>
                     </div>
                 </div>
