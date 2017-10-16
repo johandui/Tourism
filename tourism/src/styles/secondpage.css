@@ -1,5 +1,6 @@
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  overflow: hidden; }
 
 .Secondpage {
   height: 100vh;
@@ -16,7 +17,11 @@ body {
   font-weight: 500;
   color: #A08A58; }
 
-.step1, .days {
+.steps, .days, .money {
   font-size: 3vh;
   font-weight: 300;
   color: #5B553D; }
+
+.footer-img {
+  position: fixed;
+  bottom: 0; }

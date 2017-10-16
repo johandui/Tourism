@@ -7,6 +7,7 @@ $font : "Roboto";
 
 body {
   font-family: $font, sans-serif;
+  overflow: hidden
 }
 
 .Secondpage {
@@ -29,10 +30,15 @@ body {
   color: $color2;
 }
 
-.step1, .days {
+.steps, .days, .money {
   font-size: 3vh;
   font-weight: 300;
   color: $color1;
+}
+
+.footer-img {
+  position: fixed;
+  bottom: 0;
 }
 
 
