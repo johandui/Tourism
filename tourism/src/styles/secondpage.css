@@ -2,18 +2,29 @@
   height: 100vh;
   background-color: #FFF6E3; }
 
-.wrapper {
-  text-align: center;
+.centered, .header-wrapper {
+  text-align: center; }
+
+.header-wrapper {
   padding-top: 1em; }
 
-.text {
+.header-txt {
   font-family: "Roboto", sans-serif;
   font-size: 42px;
   font-weight: 500;
   color: #A08A58; }
 
 .cloud_wrapper {
-  padding-top: 0em; }
+  padding-top: 1em; }
 
-.centered {
-  text-align: center; }
+@media all and (max-width: 1200px) {
+  body {
+    font-size: 1.5em; } }
+
+@media all and (max-width: 1000px) {
+  body {
+    font-size: 1.2em; } }
+
+@media all and (max-width: 500px) {
+  body {
+    font-size: 0.8em; } }
