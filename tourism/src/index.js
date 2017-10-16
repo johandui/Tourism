@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, browserHistory} from 'react-router';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import {Homepage} from './pages/Homepage';
 import {Secondpage} from './pages/Secondpage';
@@ -8,7 +8,12 @@ import {Secondpage} from './pages/Secondpage';
 class App extends React.Component {
     render() {
         return (
-            <Homepage/>
+            <Router>
+                <div>
+                    <Route exact path="/" component={Homepage}/>
+                    <Route path="/second" component={Secondpage}/>
+                </div>
+            </Router>
         );
     }
 }

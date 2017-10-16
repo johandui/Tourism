@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export class Secondpage extends Component {
+export class Secondpage extends React.Component {
     render() {
         return (
             <div className="Secondpage">
