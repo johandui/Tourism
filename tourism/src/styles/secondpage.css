@@ -1,3 +1,12 @@
+body {
+  font-size: 16px; }
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: calc(16px + 8 * ((100vw - 768px) / 1160)); } }
+  @media screen and (min-width: 1928px) {
+    body {
+      font-size: 24px !important; } }
+
 .Secondpage {
   height: 100vh;
   background-color: #FFF6E3; }
@@ -13,19 +22,3 @@
   font-size: 42px;
   font-weight: 500;
   color: #A08A58; }
-
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 0.6em; } }
-
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 0.8em; } }
-
-@media screen and (min-width: 992px) {
-  body {
-    font-size: 1em; } }
-
-@media screen and (min-width: 1200px) {
-  body {
-    font-size: 1.2em; } }
