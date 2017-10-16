@@ -1,8 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {render} from 'react-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import {Homepage} from './pages/Homepage';
+import {Secondpage} from './pages/Secondpage';
+
+class App extends React.Component {
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Route exact path="/" component={Homepage}/>
+                    <Route path="/second" component={Secondpage}/>
+                </div>
+            </Router>
+        );
+    }
+}
+
+render(<App/>, window.document.getElementById("root"));
