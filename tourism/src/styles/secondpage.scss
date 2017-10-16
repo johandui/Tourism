@@ -1,7 +1,25 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #000000;
+$color1 : #5B553D;
+$color2 : #A08A58;
+$color3 : #BAA478;
+$color4 : #E5C875;
+$color5 : #FFF6E3;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+.Secondpage {
+  height: 100vh;
+  background-color: $color5;
+}
+
+.header {
+  text-align: center;
+}
+
+.header-text {
+  font-family: Roboto, sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  color: $color2;
+}
+
+.cloud {
+  height: 200px;
 }
