@@ -6,13 +6,15 @@ export class Secondpage extends React.Component {
             <div className="Secondpage">
                 <div class="container">
                     <div class="row header-wrapper">
-                        <div class="col cloud_wrapper">
-                            <img class="cloud" src="assets/Asset 2.svg"/>
+                        <div class="col cloud-wrapper-1">
+                            <img src="assets/Asset 2.svg"/>
                         </div>
                         <div class="col-7">
                             <span class="header-txt">TOURISM</span><br/><br/>
-                            <span class="steps">Step 1</span><br/>
-                            <span class="days">How many days do you need to travel in Ulaanbaatar ?</span><br/><br/>
+                            <span class="steps">Step 1</span>
+                            <br/>
+                            <span class="days">How many days do you need to travel in Ulaanbaatar ?</span>
+                            <br/><br/><br/>
                             <div class="day-wrapper">
                                 <div class="day-selector">
                                     <input type="checkbox" id="1day" class="day" checked/>
@@ -27,23 +29,33 @@ export class Secondpage extends React.Component {
                                     <label for="5day">5</label>
                                 </div>
                             </div>
-                            <br/><br/>
+                            <br/><br/><br/>
                             <span class="steps">Step 2</span><br/>
                             <span class="money">How much money will you spend to this trip ?</span><br/><br/>
                             <div class="money-wrapper">
                                 <div class="money-selector">
                                     <input type="checkbox" id="1dollar" class="money" checked/>
-                                    <label for="1dollar">$</label>
+                                    <label for="1dollar">
+                                        <div class="money-inner">$</div>
+                                    </label>
                                     <input type="checkbox" id="2dollar" class="money" />
-                                    <label for="2dollar">$$</label>
+                                    <label for="2dollar">
+                                        <div class="money-inner">$$</div>
+                                    </label>
                                     <input type="checkbox" id="3dollar" class="money" />
-                                    <label for="3dollar">$$$</label>
+                                    <label for="3dollar">
+                                        <div class="money-inner">$$$</div>
+                                    </label>
                                     <input type="checkbox" id="4dollar" class="money" />
-                                    <label for="4dollar">$$$$</label>
+                                    <label for="4dollar">
+                                        <div class="money-inner">$$$$</div>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="col"></div>
+                        <div class="col">
+                            <img class="cloud-2" src="assets/Asset 2.svg"/>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid footer-img">

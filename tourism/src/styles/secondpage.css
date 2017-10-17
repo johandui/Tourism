@@ -8,19 +8,24 @@ body {
   height: 100vh;
   background-color: #FFF6E3; }
 
-.cloud_wrapper, .header-wrapper {
-  padding-top: 3vh; }
+.cloud-wrapper-1, .header-wrapper {
+  padding-top: 3.5vh; }
+
+.cloud-2 {
+  padding-top: 7vh;
+  max-width: 75%;
+  float: right; }
 
 .header-wrapper {
   text-align: center; }
 
 .header-txt {
-  font-size: 4.5vh;
-  font-weight: 500;
+  font-size: 5vh;
+  font-weight: 600;
   color: #A08A58; }
 
 .steps, .days, .money {
-  font-size: 3vh;
+  font-size: 3.2vh;
   font-weight: 300;
   color: #5B553D; }
 
@@ -73,20 +78,32 @@ label[for="5day"] {
 
 .money-selector input[type=checkbox] + label {
   display: inline-block;
-  background-color: #A08A58;
-  height: 3.4vmax;
-  width: 2.5vmax;
-  line-height: 3.4vmax;
-  margin-top: 0.4vmax;
+  background-color: #BAA478;
+  height: 4vmax;
+  width: 4vmax;
+  line-height: 4vmax;
   margin-right: 3vmax;
   text-align: center;
   cursor: pointer;
   font-family: "Roboto";
-  font-size: 1vmax;
-  -webkit-border-radius: 1vw;
-  -moz-border-radius: 1vw;
-  -ms-border-radius: 1vw;
-  border-radius: 1vw; }
+  font-size: 1.1vmax;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.money-inner {
+  display: inline-block;
+  background-color: #E5C875;
+  height: 2.8vmax;
+  width: 2.8vmax;
+  line-height: 2.8vmax;
+  margin-right: 3vmax;
+  margin-left: 0.6vmax;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
 
 label[for="4dolalr"] {
   margin-right: 0 !important; }

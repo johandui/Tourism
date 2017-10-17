@@ -26,23 +26,29 @@ body {
   background-color: $color5;
 }
 
-.cloud_wrapper {
-  padding-top: 3vh;
+.cloud-wrapper-1 {
+  padding-top: 3.5vh;
+}
+
+.cloud-2 {
+  padding-top: 7vh;
+  max-width: 75%;
+  float: right;
 }
 
 .header-wrapper {
   text-align: center;
-  @extend .cloud_wrapper;
+  @extend .cloud-wrapper-1;
 }
 
 .header-txt {
-  font-size: 4.5vh;
-  font-weight: 500;
+  font-size: 5vh;
+  font-weight: 600;
   color: $color2;
 }
 
 .steps, .days, .money {
-  font-size: 3vh;
+  font-size: 3.2vh;
   font-weight: 300;
   color: $color1;
 }
@@ -98,17 +104,27 @@ label[for="5day"]  {
 
 .money-selector input[type=checkbox] + label {
   display: inline-block;
-  background-color: $color2;
-  height: 3.4vmax;
-  width: 2.5vmax;
-  line-height: 3.4vmax;
-  margin-top: 0.4vmax;
+  background-color: $color3;
+  height: 4vmax;
+  width: 4vmax;
+  line-height: 4vmax;
   margin-right: 3vmax;
   text-align: center;
   cursor: pointer;
   font-family: $font;
-  font-size: 1vmax;
-  @include border-radius(1vw);
+  font-size: 1.1vmax;
+  @include border-radius(50%);
+}
+
+.money-inner {
+  display: inline-block;
+  background-color: $color4;
+  height: 2.8vmax;
+  width: 2.8vmax;
+  line-height: 2.8vmax;
+  margin-right: 3vmax;
+  margin-left: 0.6vmax;
+  @include border-radius(50%);
 }
 
 label[for="4dolalr"]  {
