@@ -6,6 +6,7 @@ import {Homepage} from './pages/Homepage';
 import {Secondpage} from './pages/Secondpage';
 
 import './styles/secondpage.css';
+import 'antd/dist/antd.css';
 
 class App extends React.Component {
     render() {

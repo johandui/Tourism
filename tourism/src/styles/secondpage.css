@@ -1,3 +1,5 @@
+/* start my all mixins here */
+/* end my all mixins here */
 body {
   font-family: "Roboto", sans-serif;
   overflow: hidden; }
@@ -27,6 +29,64 @@ body {
   bottom: 0;
   padding: 0; }
 
-.tree {
-  margin-bottom: -5vh;
-  z-index: 999; }
+.day-wrapper {
+  width: 99%;
+  margin: auto;
+  height: 4.2vmax;
+  background-color: #A08A58;
+  -webkit-border-radius: 3.1vh;
+  -moz-border-radius: 3.1vh;
+  -ms-border-radius: 3.1vh;
+  border-radius: 3.1vh; }
+
+.day-selector input {
+  display: none !important; }
+
+label[for="5day"] {
+  margin-right: 0 !important; }
+
+.day-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: #FFF6E3;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  border-radius: 1vw; }
+
+.day-selector input[type=checkbox]:checked + label {
+  background-color: #5B553D; }
+
+.money-selector input {
+  display: none !important; }
+
+.money-selector input[type=checkbox]:checked + label {
+  background-color: #5B553D; }
+
+.money-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: #A08A58;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1vmax;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  border-radius: 1vw; }
+
+label[for="4dolalr"] {
+  margin-right: 0 !important; }

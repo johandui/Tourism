@@ -5,6 +5,17 @@ $color4 : #E5C875;
 $color5 : #FFF6E3;
 $font : "Roboto";
 
+/* start my all mixins here */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* end my all mixins here */
+
 body {
   font-family: $font, sans-serif;
   overflow: hidden
@@ -42,9 +53,74 @@ body {
   padding: 0;
 }
 
-.tree {
-  margin-bottom: -5vh;
-  z-index: 999;
+.day-wrapper {
+  width: 99%;
+  margin: auto;
+  height: 4.2vmax;
+  background-color: $color2;
+  @include border-radius(3.1vh);
 }
+
+.day-selector input {
+  display: none !important;
+}
+
+label[for="5day"]  {
+  margin-right: 0 !important;
+}
+
+.day-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: $color5;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 1.2vmax;
+  @include border-radius(1vw);
+}
+
+.day-selector input[type=checkbox]:checked + label {
+  background-color: $color1;
+}
+
+.money-selector input {
+  display: none !important;
+}
+
+.money-selector input[type=checkbox]:checked + label {
+  background-color: $color1;
+}
+
+.money-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: $color2;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 1vmax;
+  @include border-radius(1vw);
+}
+
+label[for="4dolalr"]  {
+  margin-right: 0 !important;
+}
+
+
+
+
+
+
+
+
 
 
