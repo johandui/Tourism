@@ -1,7 +1,142 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #000000;
+$color1 : #5B553D;
+$color2 : #A08A58;
+$color3 : #BAA478;
+$color4 : #E5C875;
+$color5 : #FFF6E3;
+$font : "Roboto";
+
+/* start my all mixins here */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* end my all mixins here */
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  font-family: $font, sans-serif;
+  overflow: hidden
 }
+
+.Secondpage {
+  height: 100vh;
+  background-color: $color5;
+}
+
+.cloud-wrapper-1 {
+  padding-top: 3.5vh;
+}
+
+.cloud-2 {
+  padding-top: 7vh;
+  max-width: 75%;
+  float: right;
+}
+
+.header-wrapper {
+  text-align: center;
+  @extend .cloud-wrapper-1;
+}
+
+.header-txt {
+  font-size: 5vh;
+  font-weight: 600;
+  color: $color2;
+}
+
+.steps, .days, .money {
+  font-size: 3.2vh;
+  font-weight: 300;
+  color: $color1;
+}
+
+.footer-img {
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+}
+
+.day-wrapper {
+  width: 99%;
+  margin: auto;
+  height: 4.2vmax;
+  background-color: $color2;
+  @include border-radius(3.1vh);
+}
+
+.day-selector input {
+  display: none !important;
+}
+
+label[for="5day"]  {
+  margin-right: 0 !important;
+}
+
+.day-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: $color5;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 1.2vmax;
+  @include border-radius(1vw);
+}
+
+.day-selector input[type=checkbox]:checked + label {
+  background-color: $color1;
+}
+
+.money-selector input {
+  display: none !important;
+}
+
+.money-selector input[type=checkbox]:checked + label {
+  background-color: $color1;
+}
+
+.money-selector input[type=checkbox] + label {
+  display: inline-block;
+  background-color: $color3;
+  height: 4vmax;
+  width: 4vmax;
+  line-height: 4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 1.1vmax;
+  @include border-radius(50%);
+}
+
+.money-inner {
+  display: inline-block;
+  background-color: $color4;
+  height: 2.8vmax;
+  width: 2.8vmax;
+  line-height: 2.8vmax;
+  margin-right: 3vmax;
+  margin-left: 0.6vmax;
+  @include border-radius(50%);
+}
+
+label[for="4dolalr"]  {
+  margin-right: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+

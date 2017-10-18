@@ -1,0 +1,36 @@
+	body{
+		margin:0;
+		left: 0;
+		top:0;
+		overflow:hidden;
+	}
+	.Homepage{
+		margin: 0;
+		left:0;
+		top:0;
+		width:100%;
+	}
+	.svg {
+		width:100%;
+		background-size: cover;
+	}
+	.st0{display:none;}
+	.st1{display:inline;fill:#A08A58;}
+	.st2{display:inline;fill:#5B554D;}
+	.st3{display:inline;fill:#FFF6E3;}
+	.st4{display:inline;fill:#BAA478;}
+	.st5{display:inline;fill:#E5C875;}
+	.st6{fill:#A08A58;}
+	.st7{fill:#E5C875;}
+	.st8{fill:#FFF6E3;}
+	.st9{font-family:'Roboto-Medium';}
+	.st10{font-size:60px;}
+	.st11{fill:#BAA478;}
+	.st12{font-family:'Roboto-Light';}
+	.st13{font-size:36px;}
+	.st14{fill:#F4EBD4;}
+	.st15{display:inline;}
+	.st16{fill:#5B554D;}
+	.st17{font-family:'Roboto-Thin';}
+	.st18{font-size:24px;}
+	.st19{fill:#FFF6E3;stroke:#FFF6E3;stroke-miterlimit:10;}

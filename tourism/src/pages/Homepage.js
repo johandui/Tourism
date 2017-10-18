@@ -1,22 +1,174 @@
 import React from 'react';
 
-
 export class Homepage extends React.Component {
   render() {
     return (
       <div className="Homepage">
-        <div class="container">
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <a href="/" class="btn btn-info" role="button">Homepage</a>
-              <a href="/second" class="btn btn-info" role="button">Secondpage</a>
-            </div>
-          </nav>
-        </div>
+        
+          <svg className="svg" viewBox="0 0 1366 768" >
+<g id="FirstPage">
+  <g id="Background">
+    <rect className="st6" width="1366" height="768"/>
+  </g>
+  <g id="BackgroundSquare">
+    <polyline className="st7" points="771,542 771,330 817,330 815,542 771,542     "/>
+    <polygon className="st7" points="865,260 989,260 994.3,270 1144,270 1144,313 1144,543 865,543     "/>
+    <g id="Layer_4">
+      <polygon className="st7" points="380,345 368,345 327,345 327,539 368,539 380,539 421,539 421,345      "/>
+    </g>
+    <path className="st7" d="M327,274v-9l-210-32l-66,28l-15,7v12h9v-7h68v47H51v4v220h246V292h-89v15h-79v-33H327z M113,259H73l40-19V259
+      z M263,264h-72l-34-17L263,264z M124,264v-20l50,20H124z"/>
+    <polygon className="st7" points="497,348 497,347 447,348 447,542 495,542 497,542 545,542 545,347    "/>
+    <polygon className="st7" points="555,295 555,541 740,541 740,347 705,347 705,295    "/>
+    <rect x="1179" y="274" className="st7" width="103.1" height="268"/>
+  </g>
+  <g id="SQUARE">
+    <g id="Layer_2">
+      <path className="st8" d="M123,471v-35c23-5,29-12,29-12l-2-1c-12,7-26,2-26,2c-2,0-4-25-4-25h-5v7H91v-14h-1.5v-0.5h-2v14h-24v-7h-5
+        c0,0-2,25-4,25c0,0-14,5-26-2l-2,1c0,0,6,7,29,12v35c0,0-23,0-26-4l-3,1c0,0,16,11,22,12v67h38H89v0.5h3h38v-67c6-1,22-12,22-12
+        l-3-1C146,471,123,471,123,471z"/>
+      <path className="st8" d="M1241,471v-35c23-5,29-12,29-12l-2-1c-12,7-26,2-26,2c-2,0-4-25-4-25h-5v7h-24v-14h-1.5v-0.5h-2v14h-24v-7
+        h-5c0,0-2,25-4,25c0,0-14,5-26-2l-2,1c0,0,6,7,29,12v35c0,0-23,0-26-4l-3,1c0,0,16,11,22,12v67h38h2.5v0.5h3h38v-67
+        c6-1,22-12,22-12l-3-1C1264,471,1241,471,1241,471z"/>
+    </g>
+    <g id="Layer_7">
+      <polyline className="st7" points="652,330 652,543 652,330       "/>
+      <path className="st8" d="M530,543c0,0-2.6-104.4,33-148.7c0,0,37.5-57.5,90-63.4V543H530z"/>
+    </g>
+    <g id="Layer_8">
+      <path className="st8" d="M817,452c0,0-10-5-12-7l-13-13h-52h-52l-13,13c-2,2-12,7-12,7c-2,2,5,5,5,5v85h72h72v-85
+        C812,457,819,454,817,452z"/>
+    </g>
+    <g id="Layer_6">
+      <polygon className="st8" points="520,393 520,391 491,391 491,381 493,381 493,376 486,376 479,376 479,381 481,381 481,391 452,391 
+        452,393 454,393 454,401 452,401 452,407 454,407 454,543 486,543 518,543 518,407 520,407 520,401 518,401 518,393       "/>
+    </g>
+    <g id="Layer_3">
+      <path className="st8" d="M225,440c0,0,6,3,8,3c0,0,2,0,2-2c0,0-2-5-5-7v-4l-2,1c0,0-8-1-14,9v2h-10l-1-5c0,0,10-1,11-1c0,0,6-1-10-4
+        c0,0-2-8-1-10c0,0,0-5-3-5c0,0-3,0-3,4c0,0-3,5.1-3,5.7c-0.1,7-0.3,19.3-1,19.3c0,0-24-1-26,3c0,0-6,8-4,16l2,4c0,0,3,0,3-1
+        c0,0,0-6,1-10c0,0,1,0,2,3c0,0,1,5,1,6c0,0,2,13,1,13h2c0,0,2-13,2-14s0,1,0,1h4v12h2l2-12c0,0,22,0,24,0v12h2l1-12h3v12l3-1
+        l1-13c0,0,4-11,4-16"/>
+      <path className="st8" d="M164,543v-40c0,0-5,0-5-3c0,0,1-3,6-3h2v-6h5l1-11h2l1,10h5v-11h2l1,11h25v-11h2v11h4v-11l0,0l3-1v12l7,6
+        c0,0,7,1,7,3c0,0-4,4-6,3v41H164z"/>
+    </g>
+    <g id="Layer_5">
+      <path className="st8" d="M240,543V387h43v-13c0,0-7-5-6-9h10v-12h4v-8h3v6l3,1l-3,2v8h29v-8h4v8h34v-8h4v8h11v12h-7v24h7v-5h-3v-2h27
+        v-15h12v15h27v4h-2v5h2v6h-2v137"/>
+    </g>
+    <path className="st8" d="M1076,414l26-32c0,0-39,16-48,12l4-7h2v-18h-10v18h2v4l-1-2h-7v-22l13-20c0,0-13,11-18,13h-21v-5h7
+      c0,0,1-2,0-3h-5l-2,1h-30v-3h2v-4h-2v-6h-2h-2v6h-2v4h2v3h-30l-2-1h-5c-1,1,0,3,0,3h7v5h-21c-5-2-18-13-18-13l13,20v22h-7l-1,2v-4
+      h2v-18h-10v18h2l4,7c-9,4-48-12-48-12l26,32l-31,128h121h121L1076,414z"/>
+  </g>
+  <g id="Title">
+    <text transform="matrix(1 0 0 1 555 164)" className="st8 st9 st10">TOURISM</text>
+  </g>
+  <g id="MOON" className="MOON">
+    <circle className="st11" cx="230" cy="122" r="57"/>
+    <path className="st8" d="M214.5,137.3c-18-18-21.4-44.9-10.4-66.3c-5.1,2.6-10,6.1-14.3,10.4c-22.3,22.3-22.3,58.4,0,80.6
+      c22.3,22.3,58.4,22.3,80.6,0c4.3-4.3,7.8-9.1,10.4-14.3C259.4,158.7,232.5,155.2,214.5,137.3z"/>
+  </g>
+  <g id="STARS">
+    <g>
+      <g>
+        <path className="st8" d="M1048,64.6c1.9,0,1.9-3,0-3C1046.1,61.6,1046.1,64.6,1048,64.6L1048,64.6z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1103.3,42.5c1.9,0,1.9-3,0-3C1101.3,39.5,1101.3,42.5,1103.3,42.5L1103.3,42.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1070.1,119.9c1.9,0,1.9-3,0-3C1068.2,116.9,1068.2,119.9,1070.1,119.9L1070.1,119.9z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1122.6,95c1.9,0,1.9-3,0-3C1120.7,92,1120.7,95,1122.6,95L1122.6,95z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1166.8,114.3c1.9,0,1.9-3,0-3C1164.9,111.3,1164.9,114.3,1166.8,114.3L1166.8,114.3z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1213.8,111.6c1.9,0,1.9-3,0-3C1211.9,108.6,1211.9,111.6,1213.8,111.6L1213.8,111.6z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M1258,75.7c1.9,0,1.9-3,0-3C1256.1,72.7,1256.1,75.7,1258,75.7L1258,75.7z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M122,38.5c1.9,0,1.9-3,0-3C120.1,35.5,120.1,38.5,122,38.5L122,38.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M86,154.5c1.9,0,1.9-3,0-3C84.1,151.5,84.1,154.5,86,154.5L86,154.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M196,204.5c1.9,0,1.9-3,0-3C194.1,201.5,194.1,204.5,196,204.5L196,204.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M508,52.5c1.9,0,1.9-3,0-3C506.1,49.5,506.1,52.5,508,52.5L508,52.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M606,48.5c1.9,0,1.9-3,0-3C604.1,45.5,604.1,48.5,606,48.5L606,48.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M476,212.5c1.9,0,1.9-3,0-3C474.1,209.5,474.1,212.5,476,212.5L476,212.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M646,224.5c1.9,0,1.9-3,0-3C644.1,221.5,644.1,224.5,646,224.5L646,224.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M780,54.5c1.9,0,1.9-3,0-3C778.1,51.5,778.1,54.5,780,54.5L780,54.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M980,168.5c1.9,0,1.9-3,0-3C978.1,165.5,978.1,168.5,980,168.5L980,168.5z"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path className="st8" d="M778,242.5c1.9,0,1.9-3,0-3C776.1,239.5,776.1,242.5,778,242.5L778,242.5z"/>
+      </g>
+    </g>
+  </g>
+  <a href="/second" className="btn btn-info" role="button">
+  <g id="Layer_16" className="start_btn">
+    <path className="st8" d="M935.8,692.5H430.4c-19.8,0-35.9-16.1-35.9-35.9v-1.7c0-19.8,16.1-35.9,35.9-35.9h505.4
+      c19.8,0,35.9,16.1,35.9,35.9v1.7C971.6,676.4,955.6,692.5,935.8,692.5z"/>
+  </g>
+  <text transform="matrix(1 0 0 1 467 670)" className="st6 st12 st13">START PLANING YOUR TRIP</text>
+  </a>
+  <g id="foreground">
+    <rect x="21" y="542" className="st7" width="1321" height="11"/>
+    <rect x="21" y="553" className="st14" width="1321" height="9"/>
+  </g>
+</g>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</svg>
+
       </div>
     );
   }
