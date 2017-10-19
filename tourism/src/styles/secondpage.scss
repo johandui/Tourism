@@ -75,7 +75,7 @@ label[for="5day"]  {
   margin-right: 0 !important;
 }
 
-.day-selector input[type=checkbox] + label {
+.day-selector input[type=radio] + label {
   display: inline-block;
   background-color: $color5;
   height: 3.4vmax;
@@ -90,7 +90,7 @@ label[for="5day"]  {
   @include border-radius(1vw);
 }
 
-.day-selector input[type=checkbox]:checked + label {
+.day-selector input[type=radio]:checked + label {
   background-color: $color1;
 }
 
@@ -98,11 +98,11 @@ label[for="5day"]  {
   display: none !important;
 }
 
-.money-selector input[type=checkbox]:checked + label {
+.money-selector input[type=radio]:checked + label {
   background-color: $color1;
 }
 
-.money-selector input[type=checkbox] + label {
+.money-selector input[type=radio] + label {
   display: inline-block;
   background-color: $color3;
   height: 4vmax;

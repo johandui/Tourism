@@ -50,7 +50,7 @@ body {
 label[for="5day"] {
   margin-right: 0 !important; }
 
-.day-selector input[type=checkbox] + label {
+.day-selector input[type=radio] + label {
   display: inline-block;
   background-color: #FFF6E3;
   height: 3.4vmax;
@@ -67,16 +67,16 @@ label[for="5day"] {
   -ms-border-radius: 1vw;
   border-radius: 1vw; }
 
-.day-selector input[type=checkbox]:checked + label {
+.day-selector input[type=radio]:checked + label {
   background-color: #5B553D; }
 
 .money-selector input {
   display: none !important; }
 
-.money-selector input[type=checkbox]:checked + label {
+.money-selector input[type=radio]:checked + label {
   background-color: #5B553D; }
 
-.money-selector input[type=checkbox] + label {
+.money-selector input[type=radio] + label {
   display: inline-block;
   background-color: #BAA478;
   height: 4vmax;

@@ -17,15 +17,15 @@ export class Secondpage extends React.Component {
                             <br/><br/><br/>
                             <div class="day-wrapper">
                                 <div class="day-selector">
-                                    <input type="checkbox" id="1day" class="day" checked/>
+                                    <input type="radio" id="1day" name="day" class="day" checked/>
                                     <label for="1day">1</label>
-                                    <input type="checkbox" id="2day" class="day" />
+                                    <input type="radio" id="2day" name="day" class="day" />
                                     <label for="2day">2</label>
-                                    <input type="checkbox" id="3day" class="day" />
+                                    <input type="radio" id="3day" name="day" class="day" />
                                     <label for="3day">3</label>
-                                    <input type="checkbox" id="4day" class="day" />
+                                    <input type="radio" id="4day" name="day" class="day" />
                                     <label for="4day">4</label>
-                                    <input type="checkbox" id="5day" class="day" />
+                                    <input type="radio" id="5day" name="day" class="day" />
                                     <label for="5day">5</label>
                                 </div>
                             </div>
@@ -34,19 +34,19 @@ export class Secondpage extends React.Component {
                             <span class="money">How much money will you spend to this trip ?</span><br/><br/>
                             <div class="money-wrapper">
                                 <div class="money-selector">
-                                    <input type="checkbox" id="1dollar" class="money" checked/>
+                                    <input type="radio" id="1dollar" name="money" class="money" checked/>
                                     <label for="1dollar">
                                         <div class="money-inner">$</div>
                                     </label>
-                                    <input type="checkbox" id="2dollar" class="money" />
+                                    <input type="radio" id="2dollar" name="money" class="money" />
                                     <label for="2dollar">
                                         <div class="money-inner">$$</div>
                                     </label>
-                                    <input type="checkbox" id="3dollar" class="money" />
+                                    <input type="radio" id="3dollar" name="money" class="money" />
                                     <label for="3dollar">
                                         <div class="money-inner">$$$</div>
                                     </label>
-                                    <input type="checkbox" id="4dollar" class="money" />
+                                    <input type="radio" id="4dollar" name="money" class="money" />
                                     <label for="4dollar">
                                         <div class="money-inner">$$$$</div>
                                     </label>
