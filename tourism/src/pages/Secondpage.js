@@ -52,6 +52,10 @@ export class Secondpage extends React.Component {
                                     </label>
                                 </div>
                             </div>
+                            <br/>
+                            <div>
+                                <a class="btn btn-primaty go-button" href="/last" role="button">Let's Go</a>
+                            </div>
                         </div>
                         <div class="col">
                             <img class="cloud-2" src="assets/Asset 2.svg"/>
