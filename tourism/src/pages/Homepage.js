@@ -4,12 +4,11 @@ export class Homepage extends React.Component {
   render() {
     return (
       <div className="Homepage">
-        
           <svg className="svg" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin slice">
 
 <g id="FirstPage">
   <g id="Background">
-    <rect class="st6" width="1366" height="768"/>
+    <rect class="st6" width="100%" height="100%"/>
   </g>
   <g id="BackgroundSquare">
     <polyline class="st7" points="759.7,500.1 759.7,306.5 801.7,306.5 799.9,500.1 759.7,500.1     "/>
