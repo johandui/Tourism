@@ -1,20 +1,4 @@
-$color1 : #5B553D;
-$color2 : #A08A58;
-$color3 : #BAA478;
-$color4 : #E5C875;
-$color5 : #FFF6E3;
-$font : "Roboto";
-
-/* start my all mixins here */
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-/* end my all mixins here */
+@import 'partial';
 
 body {
   font-family: $font, sans-serif;
@@ -130,6 +114,43 @@ label[for="5day"]  {
 label[for="4dolalr"]  {
   margin-right: 0 !important;
 }
+
+.go-button {
+  background-color: $color2;
+  color: $color5;
+  width: 8vmax;
+  font-size: 1.1vmax;
+  font-family: $font;
+  @include border-radius(1vmax);
+}
+
+.go-button:hover {
+  color: $color1;
+}
+
+/* start media queries */
+
+@media (max-width: 576px) {
+  .go-button {
+    width: 12vmax;
+    font-size: 1.8vmax;
+  }
+  .day-wrapper {
+    width: 120%;
+    height: 5vmax;
+    margin-left: -10%;
+  }
+  .day-selector input[type=radio] + label {
+    height: 3.8vmax;
+    width: 2.8vmax;
+    line-height: 3.8vmax;
+    margin-top: 0.6vmax;
+    margin-right: 3vmax;
+    font-size: 1.6vmax;
+  }
+}
+
+/* end media queries */
 
 
 

@@ -1,0 +1,13 @@
+$color1 : #5B553D;
+$color2 : #A08A58;
+$color3 : #BAA478;
+$color4 : #E5C875;
+$color5 : #FFF6E3;
+$font : "Roboto";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}

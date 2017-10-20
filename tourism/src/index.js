@@ -4,9 +4,11 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import {Homepage} from './pages/Homepage';
 import {Secondpage} from './pages/Secondpage';
+import {Lastpage} from './pages/Lastpage';
+
 import './styles/firstpage.css';
 import './styles/secondpage.css';
-import 'antd/dist/antd.css';
+import './styles/lastpage.css';
 
 class App extends React.Component {
     render() {
@@ -15,6 +17,7 @@ class App extends React.Component {
                 <div>
                     <Route exact path="/" component={Homepage}/>
                     <Route path="/second" component={Secondpage}/>
+                    <Route path="/last" component={Lastpage}/>
                 </div>
             </Router>
         );
