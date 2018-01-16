@@ -5,7 +5,6 @@ export class Homepage extends React.Component {
     return (
       <div className="Homepage">
           <svg className="svg" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin slice">
-
 <g id="FirstPage">
   <g id="Background">
     <rect class="st6" width="100%" height="100%"/>
