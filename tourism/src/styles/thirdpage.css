@@ -1,0 +1,172 @@
+body {
+  font-family: "Roboto", sans-serif;
+  overflow: hidden; }
+.react-datepicker__input-container input{
+  background-color: #E5C875;
+  border: 3px #BAA478 solid;
+  padding:10px;
+  padding-left: 3em;
+  padding-right: 3em;
+   color:#5B553D;
+}
+.react-datepicker {
+  background-color: #FFF6E3;
+ 
+  font-family: "Roboto", sans-serif;
+
+}
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name, .react-datepicker__current-month{
+  color:#5B553D;
+
+}
+.react-datepicker__day:hover {
+  background-color: transparent; 
+}
+.react-datepicker__day--selected:hover{
+    background-color: #A08A58;  
+}
+.react-datepicker__day--selected{
+  background-color: #A08A58;
+  color: #fff;
+}
+.react-datepicker__header{
+  background-color :#A08A58; 
+  color:#5B553D;
+
+}
+.Secondpage {
+  height: 100vh;
+  background-color: #FFF6E3; }
+
+.cloud-wrapper-1, .header-wrapper {
+  padding-top: 3.5vh; }
+
+.cloud-2 {
+  padding-top: 7vh;
+  max-width: 75%;
+  float: right; }
+
+.header-wrapper {
+  text-align: center; }
+
+.header-txt {
+  font-size: 5vh;
+  font-weight: 600;
+  color: #A08A58; }
+
+.steps, .days, .money {
+  font-size: 3.2vh;
+  font-weight: 300;
+  color: #5B553D; }
+
+.footer-img {
+  position: fixed;
+  bottom: 0;
+  padding: 0; }
+
+.day-wrapper {
+  width: 99%;
+  margin: auto;
+  height: 4.2vmax;
+  background-color: #A08A58;
+  -webkit-border-radius: 3.1vh;
+  -moz-border-radius: 3.1vh;
+  -ms-border-radius: 3.1vh;
+  border-radius: 3.1vh; }
+
+.day-selector input {
+  display: none !important; }
+
+label[for="5day"] {
+  margin-right: 0 !important; }
+
+.day-selector input[type=radio] + label {
+  display: inline-block;
+  background-color: #FFF6E3;
+  height: 3.4vmax;
+  width: 2.5vmax;
+  line-height: 3.4vmax;
+  margin-top: 0.4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  border-radius: 1vw; }
+
+.day-selector input[type=radio]:checked + label {
+  background-color: #5B553D; }
+
+.money-selector input {
+  display: none !important; }
+
+.money-selector input[type=radio]:checked + label {
+  background-color: #5B553D; }
+
+.money-selector input[type=radio] + label {
+  display: inline-block;
+  background-color: #BAA478;
+  height: 4vmax;
+  width: 4vmax;
+  line-height: 4vmax;
+  margin-right: 3vmax;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1.1vmax;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.money-inner {
+  display: inline-block;
+  background-color: #E5C875;
+  height: 2.8vmax;
+  width: 2.8vmax;
+  line-height: 2.8vmax;
+  margin-right: 3vmax;
+  margin-left: 0.6vmax;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+label[for="4dolalr"] {
+  margin-right: 0 !important; }
+
+.go-button {
+  background-color: #A08A58;
+  color: #FFF6E3;
+  width: 8vmax;
+  font-size: 1.1vmax;
+  font-family: "Roboto";
+  -webkit-border-radius: 1vmax;
+  -moz-border-radius: 1vmax;
+  -ms-border-radius: 1vmax;
+  border-radius: 1vmax; }
+
+.go-button:hover {
+  color: #5B553D; }
+
+/* start media queries */
+@media (max-width: 576px) {
+  .go-button {
+    width: 12vmax;
+    font-size: 1.8vmax; }
+  .day-wrapper {
+    width: 120%;
+    height: 5vmax;
+    margin-left: -10%; }
+  .day-selector input[type=radio] + label {
+    height: 3.8vmax;
+    width: 2.8vmax;
+    line-height: 3.8vmax;
+    margin-top: 0.6vmax;
+    margin-right: 3vmax;
+    font-size: 1.6vmax; } }
+
+/* end media queries */

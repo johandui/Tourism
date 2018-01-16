@@ -54,7 +54,7 @@ export class Secondpage extends React.Component {
                             </div>
                             <br/>
                             <div>
-                                <a class="btn btn-primaty go-button" href="/last" role="button">Let's Go</a>
+                                <a class="btn btn-primaty go-button" href="/thirdpage" role="button">Next</a>
                             </div>
                         </div>
                         <div class="col">
@@ -62,13 +62,7 @@ export class Secondpage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid footer-img">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="assets/Asset 7.svg"/>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         );
     }
