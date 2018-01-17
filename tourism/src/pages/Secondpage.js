@@ -1,6 +1,12 @@
 import React from 'react';
 
 export class Secondpage extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            day: '1',
+        };
+    }
     render() {
         return (
             <div className="Secondpage">
@@ -54,7 +60,7 @@ export class Secondpage extends React.Component {
                             </div>
                             <br/>
                             <div>
-                                <a class="btn btn-primaty go-button" href="/thirdpage" role="button">Next</a>
+                                <a class="btn btn-primaty go-button" href="/thirdpage" role="button">{this.props.testProp}Next</a>
                             </div>
                         </div>
                         <div class="col">
@@ -62,7 +68,6 @@ export class Secondpage extends React.Component {
                         </div>
                     </div>
                 </div>
-                
             </div>
         );
     }

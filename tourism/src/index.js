@@ -10,6 +10,8 @@ import './styles/firstpage.css';
 import './styles/secondpage.css';
 import './styles/lastpage.css';
 import './styles/thirdpage.css';
+
+
 class App extends React.Component {
     render() {
         return (
