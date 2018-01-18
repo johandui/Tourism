@@ -1,0 +1,11 @@
+@import 'partial';
+
+body {
+  font-family: $font, sans-serif;
+  overflow: hidden
+}
+
+.Mainpage {
+  background-color: $color5;
+  height: 100vh;
+}
