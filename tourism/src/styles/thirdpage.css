@@ -6,9 +6,21 @@ body {
   border: 3px #BAA478 solid;
   padding:10px;
   padding-left: 3em;
-  padding-right: 3em;
+  padding-right: 0;
    color:#5B553D;
 }
+  .stt0{fill:#E5C875;}
+  .stt1{fill:#A08A58;}
+  .stt2{fill:#FFF6E4;
+
+     font-family:Roboto-Bold;
+     font-size:33px;
+     }
+  .stt3{fill:#88754F;}
+  .stt4{fill:none;stroke:#FFF6E5;stroke-miterlimit:10;}
+  .stt5{fill:none;stroke:#BAA478;stroke-width:0.25;stroke-miterlimit:10;}
+  .stt6{fill:#BAA478;}
+
 .react-datepicker {
   background-color: #FFF6E3;
  

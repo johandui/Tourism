@@ -9,11 +9,33 @@ body {
   height: 100vh;
   background-color: $color5;
 }
+  .svg2{
+      width: 100%;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    }
+
 
 .cloud-wrapper-1 {
   padding-top: 3.5vh;
 }
-
+.sts0{fill: #776647}
+  .sts1{fill:#BAA478;}
+  .sts2{fill:#A08A58;}
+  .sts3{fill:#87744E;}
+  .sts4{fill:#967671;}
+  .sts5{fill:#E5C875;}
+  .sts6{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+  .sts7{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+  .sts8 {
+     font-family:Roboto-Bold;
+     font-size:33px;
+     fill: $color2;
+  }
 .cloud-2 {
   padding-top: 7vh;
   max-width: 75%;
