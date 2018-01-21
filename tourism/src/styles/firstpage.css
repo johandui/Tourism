@@ -3,6 +3,7 @@
 		left: 0;
 		top:0;
 		overflow:hidden;
+		font-family: "Roboto", sans-serif;
 	}
 	.svg{
 		width: 100%;
@@ -39,16 +40,13 @@
 	.st6{fill:#A08A58;}
 	.st7{fill:#E5C875;}
 	.st8{fill:#FFF6E3;}
-	.st9{font-family:'Roboto-Medium';}
 	.st10{font-size:54.7786px;}
 	.st11{fill:#BAA478;}
-	.st12{font-family:'Roboto-Light';}
 	.st13{font-size:32.8671px;}
 	.st14{fill:#F4EBD4;}
 	.st15{display:inline;}
 	.st16{font-size:60px;}
 	.st17{fill:#5B554D;}
 	.st18{font-size:36px;}
-	.st19{font-family:'Roboto-Thin';}
 	.st20{font-size:24px;}
 	.st21{fill:#FFF6E3;stroke:#FFF6E3;stroke-miterlimit:10;}
