@@ -5,3 +5,57 @@ body {
 .Mainpage {
   background-color: #FFF6E3;
   height: 100vh; }
+
+.atts_div {
+  margin-top: 5vmax; }
+
+.atts_ul {
+  list-style-type: none; }
+
+.atts_li {
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  color: #5B553D;
+  cursor: pointer;
+  margin-bottom: 2vmax; }
+
+.atts_number {
+  display: inline-block;
+  background-color: #BAA478;
+  height: 3vmax;
+  width: 3vmax;
+  line-height: 3vmax;
+  margin-right: 2vmax;
+  text-align: center;
+  cursor: pointer;
+  color: #5B553D;
+  font-weight: 300;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.unique_number {
+  color: #FFF6E3;
+  background-color: #A08A58; }
+
+.atts_remove {
+  padding-left: 1vmax;
+  padding-right: 1vmax;
+  float: right;
+  color: #5B553D;
+  padding-bottom: 1vmax;
+  display: none;
+  line-height: 2.7vmax; }
+
+.show_atts_remove_button {
+  background-color: #A08A58;
+  -webkit-border-radius: 2vmax;
+  -moz-border-radius: 2vmax;
+  -ms-border-radius: 2vmax;
+  border-radius: 2vmax; }
+  .show_atts_remove_button .atts_remove {
+    display: initial;
+    color: #FFF6E3; }
+  .show_atts_remove_button .unique_number {
+    background-color: #BAA478; }

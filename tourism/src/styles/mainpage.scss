@@ -9,3 +9,60 @@ body {
   background-color: $color5;
   height: 100vh;
 }
+
+.atts_div {
+  margin-top: 5vmax;
+}
+
+.atts_ul {
+  list-style-type: none;
+}
+
+.atts_li {
+  font-family: $font;
+  font-size: 1.2vmax;
+  color: $color1;
+  cursor: pointer;
+  margin-bottom: 2vmax;
+}
+
+.atts_number {
+  display: inline-block;
+  background-color: $color3;
+  height: 3vmax;
+  width: 3vmax;
+  line-height: 3vmax;
+  margin-right: 2vmax;
+  text-align: center;
+  cursor: pointer;
+  color: $color1;
+  font-weight: 300;
+  @include border-radius(50%);
+}
+
+.unique_number {
+  color: $color5;
+  background-color: $color2;
+}
+
+.atts_remove {
+  padding-left: 1vmax;
+  padding-right: 1vmax;
+  float: right;
+  color: $color1;
+  padding-bottom: 1vmax;
+  display: none;
+  line-height: 2.7vmax;
+}
+
+.show_atts_remove_button {
+  .atts_remove {
+    display: initial;
+    color: $color5;
+  }
+  .unique_number {
+    background-color: $color3;
+  }
+  background-color: $color2;
+  @include border-radius(2vmax);
+}
