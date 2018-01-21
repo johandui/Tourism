@@ -26,6 +26,7 @@
 	}
 	.start_btn{
 		margin-top: 9999;
+        cursor: pointer;
 	}
 	#pzda{
 		position: absolute;
@@ -37,7 +38,9 @@
 	.st3{display:inline;fill:#FFF6E3;}
 	.st4{display:inline;fill:#BAA478;}
 	.st5{display:inline;fill:#E5C875;}
-	.st6{fill:#A08A58;}
+	.st6{fill:#A08A58;
+        cursor: pointer;
+    }
 	.st7{fill:#E5C875;}
 	.st8{fill:#FFF6E3;}
 	.st10{font-size:54.7786px;}
