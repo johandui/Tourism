@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import GoogleMapReact from 'google-map-react';
 
 export class Mainpage extends React.Component {
     constructor (props) {
@@ -62,6 +63,10 @@ export class Mainpage extends React.Component {
             });
         }
     }
+    static defaultProps = {
+        center: {lat: 47.8864, lng: 106.9057},
+        zoom: 15
+    };
 
     render() {
         var count = 0;
@@ -81,18 +86,19 @@ export class Mainpage extends React.Component {
             }
         })
         return (
-            <div className="Mainpage">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4" class="atts_div">
-                            <ul class="atts_ul">
-                                {arr}
-                            </ul>
-                        </div>
-                        <div class="col-8">
-                        </div>
+            <div className="row Mainpage">
+                    <div class="col-4 atts_div">
+                        <ul class="atts_ul">
+                            {arr}
+                        </ul>
                     </div>
-                </div>
+                    <div class="col-8 map-column">
+                        <GoogleMapReact
+                            defaultCenter={this.props.center}
+                            defaultZoom={this.props.zoom}
+                        >
+                        </GoogleMapReact>
+                    </div>
             </div>
         );
     }

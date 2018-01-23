@@ -8,6 +8,12 @@ body {
 .Mainpage {
   background-color: $color5;
   height: 100vh;
+  width: 100vw;
+  margin-left: 0px;
+}
+
+.map-column {
+  padding-right: 0px;
 }
 
 .atts_div {
