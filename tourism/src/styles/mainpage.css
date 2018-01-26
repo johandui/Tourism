@@ -4,63 +4,85 @@ body {
 
 .Mainpage {
   background-color: #FFF6E3;
-  height: 100vh;
   width: 100vw;
-  margin-left: 0px; }
+  height: 100vh;
+  margin-left: 0px;
+  overflow: hidden; }
 
-.map-column {
-  padding-right: 0px; }
+.main-row {
+  height: 95vh; }
 
-.atts_div {
-  margin-top: 5vmax; }
+.map-column, .tour-column {
+  padding: 0px; }
 
-.atts_ul {
-  list-style-type: none; }
+.tour-column {
+  margin-top: 7vmax; }
 
-.atts_li {
-  font-family: "Roboto";
-  font-size: 1.2vmax;
-  color: #5B553D;
+.single-tour-plan {
+  width: 100%;
+  height: 6vmax;
   cursor: pointer;
-  margin-bottom: 2vmax; }
+  color: #5B553D; }
 
-.atts_number {
-  display: inline-block;
-  background-color: #BAA478;
-  height: 3vmax;
-  width: 3vmax;
-  line-height: 3vmax;
-  margin-right: 2vmax;
-  text-align: center;
-  cursor: pointer;
+.tour-plan-name {
+  font-weight: 500;
+  font-size: 1vmax;
+  display: table-cell;
+  vertical-align: middle; }
+
+.tour-plan-price {
+  font-weight: 500;
+  margin-left: 3vmax;
+  border: 3px solid #5B553D;
+  padding: 0.15vmax;
+  -webkit-border-radius: 0.5vmax;
+  -moz-border-radius: 0.5vmax;
+  -ms-border-radius: 0.5vmax;
+  border-radius: 0.5vmax;
+  font-size: 1vmax; }
+
+.tour-plan-img {
+  width: 100%;
+  height: 6vmax; }
+
+.price_wrapper {
+  width: 25%;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.name_wrapper {
+  width: 47%;
+  float: left;
+  display: table;
+  height: 100%; }
+
+.img_wrapper {
+  width: 28%;
+  float: left; }
+
+[data-odd-checker^="0"] {
+  background-color: rgba(186, 164, 120, 0.2) !important; }
+
+[data-odd-checker^="1"] {
+  background-color: rgba(186, 164, 120, 0.4) !important; }
+
+.main-footer {
+  height: 5vh;
+  margin: 0px;
+  background-color: #BAA478; }
+
+.footer-text, .copyright-text, .developed-text {
+  font-size: 1vmax;
   color: #5B553D;
-  font-weight: 300;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%; }
+  font-weight: 500;
+  line-height: 5vh; }
 
-.unique_number {
-  color: #FFF6E3;
-  background-color: #A08A58; }
+.copyright-text {
+  float: left;
+  padding-left: 4vmax; }
 
-.atts_remove {
-  padding-left: 1vmax;
-  padding-right: 1vmax;
-  float: right;
-  color: #5B553D;
-  padding-bottom: 1vmax;
-  display: none;
-  line-height: 2.7vmax; }
-
-.show_atts_remove_button {
-  background-color: #A08A58;
-  -webkit-border-radius: 2vmax;
-  -moz-border-radius: 2vmax;
-  -ms-border-radius: 2vmax;
-  border-radius: 2vmax; }
-  .show_atts_remove_button .atts_remove {
-    display: initial;
-    color: #FFF6E3; }
-  .show_atts_remove_button .unique_number {
-    background-color: #BAA478; }
+.developed-text {
+  position: absolute;
+  right: 2vmax; }

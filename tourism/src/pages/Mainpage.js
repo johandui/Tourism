@@ -6,8 +6,10 @@ export class Mainpage extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            attractions: [],
-            is_attr_delete_button_clicked: false
+            tour_plans: [],
+            is_attr_delete_button_clicked: false,
+            map_center: {lat: 47.9188, lng: 106.9176},
+            map_zoom: 15
         };
     }
 
@@ -32,7 +34,7 @@ export class Mainpage extends React.Component {
         })
         .then(function (response) {
             global_this.setState({
-                attractions: response.data
+                tour_plans: response.data
             });
         })
         .catch(function (error) {
@@ -40,66 +42,47 @@ export class Mainpage extends React.Component {
         });
     }
 
-    handleCheck(e) {
-        var pos = e.currentTarget.dataset.id-1;
-        var arr = this.state.attractions;
-        arr.splice(pos, 1);
-        this.setState({
-            attractions: arr
-        });
+    getTourAtts(e) {
+        alert("working")
     }
-
-    deleteButtonChecker(e) {
-        if(!this.state.is_attr_delete_button_clicked) {
-            e.currentTarget.classList.add("show_atts_remove_button");
-            this.setState({
-                is_attr_delete_button_clicked: true
-            });
-        }
-        else {
-            e.currentTarget.classList.remove("show_atts_remove_button");
-            this.setState({
-                is_attr_delete_button_clicked: false
-            });
-        }
-    }
-    static defaultProps = {
-        center: {lat: 47.8864, lng: 106.9057},
-        zoom: 15
-    };
 
     render() {
         var count = 0;
-        var arr = this.state.attractions.map((att) => {
+        var tour_plans = this.state.tour_plans.map((tour) => {
             count++;
-            if(count==1 || count== this.state.attractions.length) {
-                return  <li class="atts_li" onClick={this.deleteButtonChecker.bind(this)}>
-                            <span class="atts_number unique_number">{count} </span>{att}
-                            <span class="atts_remove" onClick={this.handleCheck.bind(this)} data-id={count}>  x</span>
-                        </li>
-            }
-            else {
-                return  <li class="atts_li" onClick={this.deleteButtonChecker.bind(this)}>
-                            <span class="atts_number">{count} </span>{att}
-                            <span class="atts_remove" onClick={this.handleCheck.bind(this)} data-id={count}>  x</span>
-                        </li>
-            }
+            return <div class="single-tour-plan" onClick={this.getTourAtts.bind(this)}
+                        data-id={count} data-odd-checker={count%2}>
+                <div class="price_wrapper">
+                    <span class="tour-plan-price">100$</span>
+                </div>
+                <div class="name_wrapper">
+                    <span class="tour-plan-name">{tour}</span>
+                </div>
+                <div class="img_wrapper">
+                    <img class="tour-plan-img" src="https://www.pandotrip.com/wp-content/uploads/2017/02/The-worlds-largest-statue-of-Genghis-Khan-Mongolia-%C2%A9-Mark-Agnor-Shutterstock-Inc.-740x494.jpg"/>
+                </div>
+            </div>
         })
         return (
-            <div className="row Mainpage">
-                    <div class="col-4 atts_div">
-                        <ul class="atts_ul">
-                            {arr}
-                        </ul>
+            <div className="Mainpage">
+                <div class="row main-row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tour-column">
+                        {tour_plans}
                     </div>
-                    <div class="col-8 map-column">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 map-column">
                         <GoogleMapReact
-                            defaultCenter={this.props.center}
-                            defaultZoom={this.props.zoom}
+                            defaultCenter={this.state.map_center}
+                            defaultZoom={this.state.map_zoom}
                         >
                         </GoogleMapReact>
                     </div>
+                </div>
+                <div class="row main-footer">
+                    <span class="copyright-text">© 2017</span>
+                    <span class="developed-text">Developed by Orgil SEO</span>
+                </div>
             </div>
+
         );
     }
 }

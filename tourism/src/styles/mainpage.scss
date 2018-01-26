@@ -7,68 +7,101 @@ body {
 
 .Mainpage {
   background-color: $color5;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   margin-left: 0px;
+  overflow: hidden;
 }
 
-.map-column {
-  padding-right: 0px;
+.main-row {
+  height: 95vh;
 }
 
-.atts_div {
-  margin-top: 5vmax;
+.map-column , .tour-column {
+  padding: 0px;
 }
 
-.atts_ul {
-  list-style-type: none;
+.tour-column {
+  margin-top: 7vmax;
 }
 
-.atts_li {
-  font-family: $font;
-  font-size: 1.2vmax;
-  color: $color1;
+.single-tour-plan {
+  width: 100%;
+  height: 6vmax;
   cursor: pointer;
-  margin-bottom: 2vmax;
+  color: $color1;
 }
 
-.atts_number {
-  display: inline-block;
+.tour-plan-name {
+  font-weight: 500;
+  font-size: 1vmax;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tour-plan-price {
+  font-weight: 500;
+  margin-left: 3vmax;
+  border: 3px solid $color1;
+  padding: 0.15vmax;
+  @include border-radius(0.5vmax)
+  font-size: 1vmax;
+}
+
+.tour-plan-img {
+  width: 100%;
+  height: 6vmax;
+}
+
+.price_wrapper {
+  width: 25%;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.name_wrapper {
+  width: 47%;
+  float: left;
+  display: table;
+  height: 100%;
+}
+
+.img_wrapper {
+  width: 28%;
+  float: left;
+}
+
+[data-odd-checker^="0"] {
+  background-color: rgba($color3_rgb, 0.2) !important;
+}
+
+[data-odd-checker^="1"] {
+  background-color: rgba($color3_rgb, 0.4) !important;
+}
+
+.main-footer {
+  height: 5vh;
+  margin: 0px;
   background-color: $color3;
-  height: 3vmax;
-  width: 3vmax;
-  line-height: 3vmax;
-  margin-right: 2vmax;
-  text-align: center;
-  cursor: pointer;
+}
+
+.footer-text {
+  font-size: 1vmax;
   color: $color1;
-  font-weight: 300;
-  @include border-radius(50%);
+  font-weight: 500;
+  line-height: 5vh;
 }
 
-.unique_number {
-  color: $color5;
-  background-color: $color2;
+.copyright-text {
+  float: left;
+  padding-left: 4vmax;
+  @extend .footer-text
 }
 
-.atts_remove {
-  padding-left: 1vmax;
-  padding-right: 1vmax;
-  float: right;
-  color: $color1;
-  padding-bottom: 1vmax;
-  display: none;
-  line-height: 2.7vmax;
-}
-
-.show_atts_remove_button {
-  .atts_remove {
-    display: initial;
-    color: $color5;
-  }
-  .unique_number {
-    background-color: $color3;
-  }
-  background-color: $color2;
-  @include border-radius(2vmax);
+.developed-text {
+  position: absolute;
+  right: 2vmax;
+  @extend .footer-text
 }
