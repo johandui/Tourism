@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export class Secondpage extends React.Component {
     constructor (props) {
@@ -10,9 +11,8 @@ export class Secondpage extends React.Component {
         };
     }
     componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 5000); 
-
-  }
+        setTimeout(() => this.setState({ loading: false }), 5000);
+    }
   
     dayStateChanger(event) {
         this.setState({
@@ -25,9 +25,7 @@ export class Secondpage extends React.Component {
             money: event.target.value
         });
     }
-    passData() {
-        this.props.history.push("/thirdpage", this.state.day+this.state.money);
-    }
+
     render() {
         const { loading } = this.state;
         if(loading) { 
@@ -214,8 +212,11 @@ export class Secondpage extends React.Component {
                             </div>
                             <br/>
                             <div>
-                                <a class="btn btn-primaty go-button" href="/thirdpage" role="button"
-                                    onClick={this.passData.bind(this)}>Next</a>
+                                <Link class="btn btn-primaty go-button"
+                                    to={{
+                                        pathname: '/thirdpage',
+                                        state: { day: this.state.day, money: this.state.money }
+                                    }}>Next</Link>
                             </div>
                         </div>
                         <div class="col">

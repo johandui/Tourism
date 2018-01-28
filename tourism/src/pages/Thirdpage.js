@@ -2,7 +2,7 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
-
+import { Link } from 'react-router-dom';
 
 export class Thirdpage extends React.Component {
     constructor (props) {
@@ -13,7 +13,7 @@ export class Thirdpage extends React.Component {
             loading: true
         };
       }
-   
+
   componentDidMount(){
     setTimeout(()=> this.setState({loading: false}), 5000);
   }
@@ -29,17 +29,8 @@ export class Thirdpage extends React.Component {
         });
     }
 
-    passData() {
-        var visited = this.state.visited;
-        var date = this.state.startDate;
-        var day_money = this.props.history.location.state;
-        var day = parseInt(day_money/10);
-        var money = day_money%10;
-        var answers = day + "" + money + "" + this.state.visited + "/" + this.state.startDate;
-        this.props.history.push("/mainpage", answers);
-    }
-
     render() {
+
         const { loading } = this.state;
         if(loading) { 
           return (
@@ -184,8 +175,16 @@ export class Thirdpage extends React.Component {
                             </div>
                             <br/>
                             <div>
-                                <a class="btn btn-primaty go-button" href="/mainpage" role="button"
-                                   onClick={this.passData.bind(this)}>Let's Go</a>
+                                <Link class="btn btn-primaty go-button"
+                                      to={{
+                                          pathname: '/mainpage',
+                                          state: {
+                                              day: this.props.location.state.day,
+                                              money: this.props.location.state.money,
+                                              startDate: this.state.startDate.format(),
+                                              visited: this.state.visited
+                                          }
+                                      }}>Let's go</Link>
                             </div>
                         </div>
                         <div className="col">
