@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import {Link} from 'react-router-dom';
 export class Secondpage extends React.Component {
     constructor (props) {
         super(props)

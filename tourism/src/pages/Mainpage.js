@@ -1,59 +1,57 @@
 import React from 'react';
 import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
-
+import Tour from '../components/Tour';
+import TourStore from "../stores/TourPlanStore";
+import * as TourActions from "../actions/TourActions";
 export class Mainpage extends React.Component {
     constructor (props) {
-        super(props)
+        super(props);
+        this.getTours = this.getTours.bind(this);
         this.state = {
-            tour_plans: [],
             is_attr_delete_button_clicked: false,
             map_center: {lat: 47.9188, lng: 106.9176},
-            map_zoom: 15
-        };
+            map_zoom: 15,
+            tour: TourStore.getAll()
+        }
+    
+    }
+    getTours(){
+        this.setState({
+            tour: TourStore.getAll()}
+         );
     }
 
-    componentDidMount() {
-        var global_this = this;
-        
-        axios.get('http://acc07.server.ehlel.com/test.php', {
-            params: {
-                day: this.props.location.state.day,
-                money: this.props.location.state.money,
-                visited: this.props.location.state.visited,
-                date: this.props.location.state.startDate
-            }
-        })
-        .then(function (response) {
-            global_this.setState({
-                tour_plans: response.data
-            });
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+
+        componentWillMount(){
+        TourStore.on("change", this.getTours);
+          var global_this = this;
+        var result = -1;
+        var answers = this.props.history.location.state.split("/");
+        var startDate = new Date(0);
+        startDate.setMilliseconds(answers[1]);
+
+        var day = parseInt (answers[0]/100);
+        var money = parseInt((answers[0]%100)/10);
+        var visited = parseInt(answers[0]%10);
+        TourActions.reloadTour(day, money, visited, startDate);
+        this.getTours();
     }
+    componentWillUnMount(){
+        TourStore.removeListener("change", this.getTours); }
+
 
     getTourAtts(e) {
-        alert("working")
+        this.state.tour.map((tour)=>{
+            if(tour.name == e.currentTarget.dataset.id)
+              (typeof tour.tour) === 'undefined' ? 
+                TourActions.reloadCurrentTour(e.currentTarget.dataset.id) : ""
+        })
     }
 
     render() {
-        var count = 0;
-        var tour_plans = this.state.tour_plans.map((tour) => {
-            count++;
-            return <div class="single-tour-plan" onClick={this.getTourAtts.bind(this)}
-                        data-id={count} data-odd-checker={count%2}>
-                <div class="price_wrapper">
-                    <span class="tour-plan-price">100$</span>
-                </div>
-                <div class="name_wrapper">
-                    <span class="tour-plan-name">{tour}</span>
-                </div>
-                <div class="img_wrapper">
-                    <img class="tour-plan-img" src="https://www.pandotrip.com/wp-content/uploads/2017/02/The-worlds-largest-statue-of-Genghis-Khan-Mongolia-%C2%A9-Mark-Agnor-Shutterstock-Inc.-740x494.jpg"/>
-                </div>
-            </div>
+        var tour_plans = this.state.tour.map((tour, count) => {
+            return <Tour onClick={this.getTourAtts.bind(this)} tour={tour} count={count}/>
         })
         return (
             <div className="Mainpage">
