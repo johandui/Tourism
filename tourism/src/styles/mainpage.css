@@ -12,6 +12,12 @@ body {
 .main-row {
   height: 95vh; }
 
+.collapse {
+  display: none; }
+
+.collapse.in {
+  display: block; }
+
 .map-column, .tour-column {
   padding: 0px; }
 
@@ -26,6 +32,12 @@ body {
 
 .tour-plan-name {
   font-weight: 500;
+  font-size: 1vmax;
+  display: table-cell;
+  vertical-align: middle; }
+
+.att-name {
+  color: #5B553D;
   font-size: 1vmax;
   display: table-cell;
   vertical-align: middle; }
@@ -62,6 +74,16 @@ body {
   width: 28%;
   float: left; }
 
+.name_wrapper_child {
+  width: 72%;
+  float: left;
+  display: table;
+  height: 100%; }
+
+.img_wrapper_child {
+  width: 28%;
+  float: left; }
+
 [data-odd-checker^="0"] {
   background-color: rgba(186, 164, 120, 0.2) !important; }
 
@@ -71,7 +93,8 @@ body {
 .main-footer {
   height: 5vh;
   margin: 0px;
-  background-color: #BAA478; }
+  background-color: #BAA478;
+  z-index: 10000; }
 
 .footer-text, .copyright-text, .developed-text {
   font-size: 1vmax;

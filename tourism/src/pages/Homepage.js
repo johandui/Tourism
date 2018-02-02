@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 export class Homepage extends React.Component {
   render() {
     return (
@@ -160,12 +160,12 @@ export class Homepage extends React.Component {
       </g>
     </g>
   </g>
-    <a href="/second" className="btn btn-info start_btn" id="start_btn" role="button">
+    <Link to="second" className="btn btn-info start_btn" id="start_btn">
 <g id="Layer_16">
     <path class="st8" d="M909.4,626.5H449.5c-18.5,0-33.6-15-33.6-33.6v0c0-18.5,15-33.6,33.6-33.6h459.8c18.5,0,33.6,15,33.6,33.6v0
       C942.9,611.5,927.9,626.5,909.4,626.5z"/>
   </g>
-  <text transform="matrix(1 0 0 1 482.187 605.958)" class="st6 st12 st13">START PLANING YOUR TRIP</text></a>
+  <text transform="matrix(1 0 0 1 482.187 605.958)" class="st6 st12 st13">START PLANING YOUR TRIP</text></Link>
   <g id="foreground">
     <rect x="75" y="500.1" class="st7" width="1206" height="10"/>
     <rect x="75" y="510.1" class="st14" width="1206" height="8.2"/>

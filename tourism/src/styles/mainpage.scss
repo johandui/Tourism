@@ -16,7 +16,13 @@ body {
 .main-row {
   height: 95vh;
 }
+ .collapse {
+    display: none;
+  }
 
+  .collapse.in {
+    display: block;
+  }
 .map-column , .tour-column {
   padding: 0px;
 }
@@ -38,7 +44,13 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
-
+.att-name{
+  color: $color1;
+  font-size: 1vmax;
+  
+  display: table-cell;
+  vertical-align: middle;
+}
 .tour-plan-price {
   font-weight: 500;
   margin-left: 3vmax;
@@ -73,6 +85,17 @@ body {
   float: left;
 }
 
+.name_wrapper_child {
+  width: 72%;
+  float: left;
+  display: table;
+  height: 100%;
+}
+.img_wrapper_child {
+  width: 28%;
+  float: left;
+}
+
 [data-odd-checker^="0"] {
   background-color: rgba($color3_rgb, 0.2) !important;
 }
@@ -85,6 +108,7 @@ body {
   height: 5vh;
   margin: 0px;
   background-color: $color3;
+  z-index: 10000;
 }
 
 .footer-text {
