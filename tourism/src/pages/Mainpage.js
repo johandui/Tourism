@@ -34,13 +34,11 @@ export class Mainpage extends React.Component {
         var day = parseInt (answers[0]/100);
         var money = parseInt((answers[0]%100)/10);
         var visited = parseInt(answers[0]%10);
-        console.log(this.props.history.location.state);
         TourActions.reloadTour(day, money, visited, startDate);
         this.getTours();
     }
     componentWillUnMount(){
-        TourStore.removeListener("change", this.getTours);
-    }
+        TourStore.removeListener("change", this.getTours); }
 
 
     getTourAtts(e) {

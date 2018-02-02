@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
+
 export class Homepage extends React.Component {
   render() {
     return (
@@ -161,6 +162,9 @@ export class Homepage extends React.Component {
     </g>
   </g>
     <Link to="second" className="btn btn-info start_btn" id="start_btn">
+
+    <Link to="/second" className="btn btn-info start_btn" id="start_btn">
+
 <g id="Layer_16">
     <path class="st8" d="M909.4,626.5H449.5c-18.5,0-33.6-15-33.6-33.6v0c0-18.5,15-33.6,33.6-33.6h459.8c18.5,0,33.6,15,33.6,33.6v0
       C942.9,611.5,927.9,626.5,909.4,626.5z"/>

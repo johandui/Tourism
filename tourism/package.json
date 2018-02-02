@@ -42,6 +42,8 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-router-page-transition-v2": "0.0.9",
+    "react-router-transition": "^1.2.0",
     "react-simple-maps": "^0.10.1",
     "react-svg-morph": "^0.1.10",
     "style-loader": "0.18.2",
