@@ -160,8 +160,7 @@ export class Homepage extends React.Component {
         <path class="st8" d="M766.1,226.7c1.9,0,1.9-3,0-3C764.2,223.7,764.2,226.7,766.1,226.7L766.1,226.7z"/>
       </g>
     </g>
-  </g>
-    <Link to="second" className="btn btn-info start_btn" id="start_btn">
+  </g>>
 
     <Link to="/second" className="btn btn-info start_btn" id="start_btn">
 

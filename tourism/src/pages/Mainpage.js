@@ -23,18 +23,13 @@ export class Mainpage extends React.Component {
     }
 
 
-        componentWillMount(){
+    componentWillMount(){
         TourStore.on("change", this.getTours);
-          var global_this = this;
-        var result = -1;
-        var answers = this.props.history.location.state.split("/");
-        var startDate = new Date(0);
-        startDate.setMilliseconds(answers[1]);
-
-        var day = parseInt (answers[0]/100);
-        var money = parseInt((answers[0]%100)/10);
-        var visited = parseInt(answers[0]%10);
-        TourActions.reloadTour(day, money, visited, startDate);
+        var day = this.props.location.state.day;
+        var money = this.props.location.state.money;
+        var visited = this.props.location.state.visited;
+        var date = this.props.location.state.startDate;
+        TourActions.reloadTour(day, money, visited, date);
         this.getTours();
     }
     componentWillUnMount(){

@@ -16,17 +16,23 @@ export default class Tour extends React.Component{
      var load =  (typeof this.props.tour.tour) === 'undefined' ? "" :
                 Object.keys(this.props.tour.tour).map((item) => ( 
                   <div class="single-tour-plan">
-                  
-                   <div class="name_wrapper_child">
-                    <li class="att-name">{this.props.tour.tour[item].att_name}</li>
-                    </div>
-                <div class="img_wrapper_child">
+           
+
+
+
+                    <div class="price_wrapper">
+                    <span class="tour-plan-price">100$</span>
+                </div>
+                <div class="name_wrapper">
+                    <span class="tour-plan-name">{this.props.tour.tour[item].att_name}</span>
+                </div>
+                <div class="img_wrapper">
                     <img class="tour-plan-img" src={this.props.tour.tour[item].url}/>
-                  </div>
+                </div>
                 </div>
                 ))
 		return (
-<div>
+        <div>
 				<div class="single-tour-plan" onClick={this.toggle.bind(this)} 
                         data-id={this.props.tour.name} data-odd-checker={this.props.count%2}>
                 <div class="price_wrapper">
@@ -41,14 +47,13 @@ export default class Tour extends React.Component{
              
             	</div>
                      <div id="demo" className={"collapse" + (this.state.open ? ' in' : '')}>
-          <div>
+   
             
                    {
 
                     load
                   }
           
-          </div>
         </div>
         </div>
 			);
