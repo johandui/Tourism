@@ -30,12 +30,10 @@ export class Thirdpage extends React.Component {
     }
 
     render() {
-
         const { loading } = this.state;
         if(loading) { 
           return (
 <div className="Homepage">
-            
         <svg className="svg2" viewBox="0 0 747.7 510" preserveAspectRatio="xMinYMin slice">
         <g id="Layer_3_1_">
     <g id="Layer_1_1_">
@@ -111,14 +109,6 @@ export class Thirdpage extends React.Component {
     
         <animateTransform  accumulate="none" additive="replace" attributeName="transform" attributeType="HML" begin="0" calcMode="linear" dur="10" fill="remove" repeatCount="1" restart="always" type="translate" values="0,0; 1000,0;0,0">
         </animateTransform>
-        {/*    <g id="Layer_4">
-        <g>
-            
-                <image style="overflow:visible;" width="134" height="110" xlink:href="CA1DA5945893434B.png"  transform="matrix(1 0 0 1 112 134.6)">
-            </image>
-        </g>
-    </g>
-*/}
 </g>
 <g id="Layer_2_2_">
     <g id="Layer_2_1_">
@@ -132,7 +122,6 @@ export class Thirdpage extends React.Component {
 <text class="stt2" transform="matrix(1 0 0 1 240.3 290.2003)" >ARE YOU READY ?</text>
 
             </svg>
-
       </div>
             )}
         return (

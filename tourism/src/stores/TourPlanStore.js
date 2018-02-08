@@ -3,7 +3,6 @@ import dispatcher from "../dispatcher";
 class TourPlanStore extends EventEmitter{
 	constructor(props) {
 	  super(props);
-	
 	  this.tours = [];
 	}
 	setInit(data){
@@ -21,8 +20,6 @@ class TourPlanStore extends EventEmitter{
 		t.tours[id].tour = [];
 		
 		t.tours[id].tour = data;
-
-		
 	}
 	handleActions(action){
 		switch(action.type){

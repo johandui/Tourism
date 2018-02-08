@@ -4,6 +4,7 @@ import GoogleMapReact from 'google-map-react';
 import Tour from '../components/Tour';
 import TourStore from "../stores/TourPlanStore";
 import * as TourActions from "../actions/TourActions";
+
 export class Mainpage extends React.Component {
     constructor (props) {
         super(props);
@@ -21,7 +22,6 @@ export class Mainpage extends React.Component {
             tour: TourStore.getAll()}
          );
     }
-
 
     componentWillMount(){
         TourStore.on("change", this.getTours);
