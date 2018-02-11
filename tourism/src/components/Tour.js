@@ -2,24 +2,18 @@ import React from 'react';
 export default class Tour extends React.Component{
      constructor() {
         super();
-        
         this.state = { open: false, loaded: false};
-        
-        }
-        toggle(e) {
+     }
+    toggle(e) {
         this.setState({
           open: !this.state.open
         });
         this.props.onClick(e);
       }
 	render(){
-     var load =  (typeof this.props.tour.tour) === 'undefined' ? "" :
+        var load =  (typeof this.props.tour.tour) === 'undefined' ? "" :
                 Object.keys(this.props.tour.tour).map((item) => ( 
                   <div class="single-tour-plan">
-           
-
-
-
                     <div class="price_wrapper">
                     <span class="tour-plan-price">100$</span>
                 </div>
@@ -47,13 +41,9 @@ export default class Tour extends React.Component{
              
             	</div>
                      <div id="demo" className={"collapse" + (this.state.open ? ' in' : '')}>
-   
-            
                    {
-
                     load
                   }
-          
         </div>
         </div>
 			);

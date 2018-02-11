@@ -22,7 +22,20 @@ body {
   padding: 0px; }
 
 .tour-column {
-  margin-top: 7vmax; }
+  margin-top: 7vmax;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.tour-column::-webkit-scrollbar {
+  width: 0.5vmax; }
+
+.tour-column::-webkit-scrollbar-thumb {
+  background-color: #BAA478;
+  -webkit-border-radius: 0.2vmax;
+  -moz-border-radius: 0.2vmax;
+  -ms-border-radius: 0.2vmax;
+  border-radius: 0.2vmax; }
 
 .single-tour-plan {
   width: 100%;
@@ -109,3 +122,13 @@ body {
 .developed-text {
   position: absolute;
   right: 4vmax; }
+
+@media only screen and (max-width: 767px) {
+  .main-row {
+    height: 95vh; }
+  .tour-column {
+    height: 50vh; }
+  .map-column {
+    height: 38vh; }
+  .main-footer {
+    height: 5vh; } }

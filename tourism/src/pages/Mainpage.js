@@ -15,7 +15,6 @@ export class Mainpage extends React.Component {
             map_zoom: 15,
             tour: TourStore.getAll()
         }
-    
     }
     getTours(){
         this.setState({
@@ -33,8 +32,8 @@ export class Mainpage extends React.Component {
         this.getTours();
     }
     componentWillUnMount(){
-        TourStore.removeListener("change", this.getTours); }
-
+        TourStore.removeListener("change", this.getTours);
+    }
 
     getTourAtts(e) {
         this.state.tour.map((tour)=>{
@@ -67,7 +66,6 @@ export class Mainpage extends React.Component {
                     <span class="developed-text">Developed by Orgil SEO</span>
                 </div>
             </div>
-
         );
     }
 }

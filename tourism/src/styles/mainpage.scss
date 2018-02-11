@@ -29,6 +29,18 @@ body {
 
 .tour-column {
   margin-top: 7vmax;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.tour-column::-webkit-scrollbar {
+  width: 0.5vmax;
+}
+
+.tour-column::-webkit-scrollbar-thumb {
+  background-color: $color3;
+  @include border-radius(0.2vmax);
 }
 
 .single-tour-plan {
@@ -56,7 +68,7 @@ body {
   margin-left: 3vmax;
   border: 3px solid $color1;
   padding: 0.15vmax;
-  @include border-radius(0.5vmax)
+  @include border-radius(0.5vmax);
   font-size: 1vmax;
 }
 
@@ -128,6 +140,21 @@ body {
   position: absolute;
   right: 4vmax;
   @extend .footer-text
+}
+
+@media only screen and (max-width: 767px) {
+  .main-row {
+    height: 95vh
+  }
+  .tour-column {
+    height: 50vh
+  }
+  .map-column {
+    height: 38vh;
+  }
+  .main-footer {
+    height: 5vh;
+  }
 }
 
 
