@@ -1,7 +1,6 @@
 import dispatcher from "../dispatcher.js";
 import axios from 'axios';
 export function reloadTour(day, money, visited, date){
-
   axios.get('http://acc07.server.ehlel.com/database/DB.php', {
         params: {
             type: "GET_NAMES",
@@ -18,7 +17,6 @@ export function reloadTour(day, money, visited, date){
     .catch(function (error) {
         console.log(error);
     });
-	
 }
 export function reloadCurrentTour(val){
   console.log(val)
@@ -31,7 +29,6 @@ export function reloadCurrentTour(val){
     .then(function (response) {
         var data = response.data;
         dispatcher.dispatch({type: "RECEIVE_CURRENT_DATA", data});
-
     })
     .catch(function (error) {
         console.log(error);

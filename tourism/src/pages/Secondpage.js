@@ -143,7 +143,7 @@ export class Secondpage extends React.Component {
         <animateTransform  accumulate="none" additive="replace" attributeName="transform" attributeType="HML" begin="0" calcMode="linear" dur="10" fill="remove" repeatCount="1" restart="always" type="translate" values="0,0; 1000,0;0,0">
         </animateTransform> 
 </g>
-<text className="sts8" transform="matrix(1 0 0 1 240.3 262.2003)" >ARE YOU READY ?</text>
+<text x="8%" className="sts8" transform="matrix(1 0 0 1 240.3 262.2003)" >Are you ready ?</text>
 
             </svg>
 
@@ -158,7 +158,7 @@ export class Secondpage extends React.Component {
                             <img src="assets/Asset 2.svg"/>
                         </div>
                         <div class="col-7">
-                            <span class="header-txt">TOURISM</span><br/><br/>
+                            <span class="header-txt">Mongolian tour planner</span><br/><br/>
                             <span class="steps">Step 1</span>
                             <br/>
                             <span class="days">How many days do you need to travel in Ulaanbaatar ?</span>

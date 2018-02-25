@@ -15,7 +15,7 @@ export class Thirdpage extends React.Component {
       }
 
   componentDidMount(){
-    setTimeout(()=> this.setState({loading: false}), 5000);
+    setTimeout(()=> this.setState({loading: false}), 4000);
   }
     dateStateChanger(date) {
         this.setState({
@@ -119,7 +119,7 @@ export class Thirdpage extends React.Component {
         </g>
     </g>
 </g>
-<text class="stt2" transform="matrix(1 0 0 1 240.3 290.2003)" >ARE YOU READY ?</text>
+<text x="8%"  class="stt2" transform="matrix(1 0 0 1 240.3 290.2003)" >Going to next page</text>
 
             </svg>
       </div>
@@ -131,7 +131,7 @@ export class Thirdpage extends React.Component {
                         <div className="col cloud-wrapper-1">
                         </div>
                         <div className="col-7">
-                            <span className="header-txt">TOURISM</span><br/><br/>
+                            <span className="header-txt">Welcome to Mongolia</span><br/><br/>
                             <span className="steps">Step 3</span>
                             <br/>
                             <span className="days">When do you plan to arrive in Mongolia?</span>

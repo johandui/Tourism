@@ -15,7 +15,7 @@ export default class Tour extends React.Component{
                 Object.keys(this.props.tour.tour).map((item) => ( 
                   <div class="single-tour-plan">
                     <div class="price_wrapper">
-                    <span class="tour-plan-price">100$</span>
+                    <span class="tour-plan-price">25$</span>
                 </div>
                 <div class="name_wrapper">
                     <span class="tour-plan-name">{this.props.tour.tour[item].att_name}</span>

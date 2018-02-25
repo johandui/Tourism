@@ -11,17 +11,15 @@ body {
 }
   .svg2{
       width: 100%;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
+      position: fixed;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
 
 .cloud-wrapper-1 {
-  padding-top: 3.5vh;
+  padding-top: 4.5vh !important;
 }
 .sts0{fill: #776647}
   .sts1{fill:#BAA478;}
@@ -32,8 +30,7 @@ body {
   .sts6{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
   .sts7{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
   .sts8 {
-     font-family:Roboto-Bold;
-     font-size:33px;
+     font-size:26px;
      fill: $color2;
   }
 .cloud-2 {
@@ -150,6 +147,10 @@ label[for="4dolalr"]  {
   color: $color1;
 }
 
+#demo .price_wrapper, #demo .name_wrapper {
+  padding-left: 4%;
+}
+
 /* start media queries */
 
 @media (max-width: 576px) {
@@ -171,6 +172,8 @@ label[for="4dolalr"]  {
     font-size: 1.6vmax;
   }
 }
+
+
 
 /* end media queries */
 

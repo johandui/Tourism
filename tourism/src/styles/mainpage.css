@@ -19,10 +19,10 @@ body {
   display: block; }
 
 .map-column, .tour-column {
-  padding: 0px; }
+  padding: 0px;
+  overflow: hidden; }
 
 .tour-column {
-  margin-top: 7vmax;
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto; }
@@ -102,6 +102,9 @@ body {
 
 [data-odd-checker^="1"] {
   background-color: rgba(186, 164, 120, 0.4) !important; }
+
+.answer_section {
+  height: 7vmax; }
 
 .main-footer {
   height: 5vh;

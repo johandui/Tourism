@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
-import GoogleMapReact from 'google-map-react';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+
 import Tour from '../components/Tour';
 import TourStore from "../stores/TourPlanStore";
 import * as TourActions from "../actions/TourActions";
@@ -11,8 +11,8 @@ export class Mainpage extends React.Component {
         this.getTours = this.getTours.bind(this);
         this.state = {
             is_attr_delete_button_clicked: false,
-            map_center: {lat: 47.9188, lng: 106.9176},
-            map_zoom: 15,
+            position: [47.918894, 106.917593],
+            zoom: 15,
             tour: TourStore.getAll()
         }
     }
@@ -46,19 +46,29 @@ export class Mainpage extends React.Component {
     render() {
         var tour_plans = this.state.tour.map((tour, count) => {
             return <Tour onClick={this.getTourAtts.bind(this)} tour={tour} count={count}/>
-        })
+        });
+        const position = [47.9210, 106.9204];
+        const test_position = [47.920493, 106.917302];
         return (
             <div className="Mainpage">
                 <div class="row main-row">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tour-column">
+                        <div class="answer_section">
+
+                        </div>
                         {tour_plans}
                     </div>
                     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 map-column">
-                        <GoogleMapReact
-                            defaultCenter={this.state.map_center}
-                            defaultZoom={this.state.map_zoom}
-                        >
-                        </GoogleMapReact>
+                        <Map style={{height: "100vh"}} center={this.state.position} zoom={this.state.zoom}>
+                            <TileLayer
+                                url="https://api.minu.mn/tiles/{z}/{x}/{y}?token=daseyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwi"
+                            />
+                            <Marker position={test_position}>
+                                <Popup>
+                                    <span>Parliament building</span>
+                                </Popup>
+                            </Marker>
+                        </Map>
                     </div>
                 </div>
                 <div class="row main-footer">

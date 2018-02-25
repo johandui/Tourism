@@ -9,12 +9,12 @@ body {
 .svg2 {
   width: 100%;
   position: fixed;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
 .cloud-wrapper-1, .header-wrapper {
-  padding-top: 3.5vh; }
+  padding-top: 4.5vh !important; }
 
 .sts0 {
   fill: #776647; }
@@ -46,8 +46,7 @@ body {
   stroke-miterlimit: 10; }
 
 .sts8 {
-  font-family: Roboto-Bold;
-  font-size: 33px;
+  font-size: 26px;
   fill: #A08A58; }
 
 .cloud-2 {
@@ -160,6 +159,9 @@ label[for="4dolalr"] {
 
 .go-button:hover {
   color: #5B553D; }
+
+#demo .price_wrapper, #demo .name_wrapper {
+  padding-left: 4%; }
 
 /* start media queries */
 @media (max-width: 576px) {
