@@ -1,5 +1,6 @@
 import { EventEmitter } from 'events';
 import dispatcher from "../dispatcher";
+
 class TourPlanStore extends EventEmitter{
 	constructor(props) {
 	  super(props);
@@ -21,12 +22,12 @@ class TourPlanStore extends EventEmitter{
 		
 		t.tours[id].tour = data;
 	}
+
 	handleActions(action){
 		switch(action.type){
 			case "CREATE_TOUR": 
 			this.createTourPlan(action.val); break;
-			case "RECEIVE_DATA": 
-				
+			case "RECEIVE_DATA":
 				action.data.map((count) => {
 					this.tours.push({name: count});
 					

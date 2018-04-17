@@ -1,4 +1,4 @@
-<?php 
+<?php
 	define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 	function get_Names($DB){
         $sql = "SELECT distinct tour_plan_name FROM `attractions`";

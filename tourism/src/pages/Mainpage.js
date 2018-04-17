@@ -16,6 +16,7 @@ export class Mainpage extends React.Component {
             tour: TourStore.getAll()
         }
     }
+
     getTours(){
         this.setState({
             tour: TourStore.getAll()}
@@ -47,7 +48,8 @@ export class Mainpage extends React.Component {
         var tour_plans = this.state.tour.map((tour, count) => {
             return <Tour onClick={this.getTourAtts.bind(this)} tour={tour} count={count}/>
         });
-        const position = [47.9210, 106.9204];
+
+
         const test_position = [47.920493, 106.917302];
         return (
             <div className="Mainpage">

@@ -10,6 +10,7 @@ export default class Tour extends React.Component{
         });
         this.props.onClick(e);
       }
+
 	render(){
         var load =  (typeof this.props.tour.tour) === 'undefined' ? "" :
                 Object.keys(this.props.tour.tour).map((item) => ( 
@@ -44,7 +45,7 @@ export default class Tour extends React.Component{
                    {
                     load
                   }
-        </div>
+                </div>
         </div>
 			);
 	}

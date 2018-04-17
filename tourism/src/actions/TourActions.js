@@ -1,7 +1,8 @@
 import dispatcher from "../dispatcher.js";
 import axios from 'axios';
+
 export function reloadTour(day, money, visited, date){
-  axios.get('http://acc07.server.ehlel.com/database/DB.php', {
+  axios.get('https://tourplanner.000webhostapp.com/database/DB.php', {
         params: {
             type: "GET_NAMES",
             day: day,
@@ -20,7 +21,7 @@ export function reloadTour(day, money, visited, date){
 }
 export function reloadCurrentTour(val){
   console.log(val)
-   axios.get('http://acc07.server.ehlel.com/database/DB.php', {
+   axios.get('https://tourplanner.000webhostapp.com/database/DB.php', {
         params: {
             type: "GET_TOURS",
             name: val,
