@@ -1,7 +1,10 @@
 import dispatcher from "../dispatcher.js";
 import axios from 'axios';
+
+
+
 export function reloadTour(day, money, visited, date){
-  axios.get('http://acc07.server.ehlel.com/database/DB.php', {
+  axios.get('http://tourplanner.orgilconsulting.com/database/DB.php', {
         params: {
             type: "GET_NAMES",
             day: day,
@@ -18,9 +21,10 @@ export function reloadTour(day, money, visited, date){
         console.log(error);
     });
 }
+
 export function reloadCurrentTour(val){
   console.log(val)
-   axios.get('http://acc07.server.ehlel.com/database/DB.php', {
+   axios.get('http://tourplanner.orgilconsulting.com/database/DB.php', {
         params: {
             type: "GET_TOURS",
             name: val,
@@ -34,6 +38,7 @@ export function reloadCurrentTour(val){
         console.log(error);
     });
 }
+
 export function createTour(val){
 	dispatcher.dispatch({
 		type: "CREATE_TOUR",

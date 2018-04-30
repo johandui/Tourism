@@ -25,8 +25,7 @@ class TourPlanStore extends EventEmitter{
 		switch(action.type){
 			case "CREATE_TOUR": 
 			this.createTourPlan(action.val); break;
-			case "RECEIVE_DATA": 
-				
+			case "RECEIVE_DATA":
 				action.data.map((count) => {
 					this.tours.push({name: count});
 					
