@@ -10,7 +10,13 @@ export default class Tour extends React.Component{
         });
         this.props.onClick(e);
       }
+<<<<<<< HEAD
 
+=======
+    simulateClick(e) {
+        e.click()
+    }
+>>>>>>> master
 	render(){
         var load =  (typeof this.props.tour.tour) === 'undefined' ? "" :
                 Object.keys(this.props.tour.tour).map((item) => ( 
@@ -28,7 +34,7 @@ export default class Tour extends React.Component{
                 ))
 		return (
         <div>
-				<div class="single-tour-plan" onClick={this.toggle.bind(this)} 
+				<div class="single-tour-plan" onClick={this.toggle.bind(this)} ref={this.simulateClick}
                         data-id={this.props.tour.name} data-odd-checker={this.props.count%2}>
                 <div class="price_wrapper">
                     <span class="tour-plan-price">100$</span>
