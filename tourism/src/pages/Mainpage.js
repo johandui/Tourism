@@ -11,8 +11,8 @@ export class Mainpage extends React.Component {
         this.getTours = this.getTours.bind(this);
         this.state = {
             is_attr_delete_button_clicked: false,
-            position: [47.918894, 106.917593],
-            zoom: 15,
+            position: [47.918895, 106.917593],
+            zoom: 13,
             tour: TourStore.getAll(),
             tempTour: [],
             loading: false
@@ -21,18 +21,21 @@ export class Mainpage extends React.Component {
 
     getTours(){
         this.setState({
-            tour: TourStore.getAll()}
+            tour: TourStore.getAll(),
+            tempTour: TourStore.getTour()}
          );
     }
 
     getTourAtts(e) {
         this.state.tour.map((tour)=>{
              if(tour.name == e.currentTarget.dataset.id){
-                (typeof tour.tour) === 'undefined' ?
-                    TourActions.reloadCurrentTour(e.currentTarget.dataset.id) : ""
                 if ((typeof tour.tour) !== 'undefined'){
                     this.setState({tempTour: tour.tour});
-                    console.log(this.state);}
+                }
+                else {
+                    TourActions.reloadCurrentTour(e.currentTarget.dataset.id);
+
+                }
             }
         })
     }
@@ -44,8 +47,7 @@ export class Mainpage extends React.Component {
         var visited = this.props.location.state.visited;
         var date = this.props.location.state.startDate;
         TourActions.reloadTour(day, money, visited, date);
-        setTimeout(() => this.setState({ loading: true }), 1000);
-        this.getTours();
+       // setTimeout(() => this.setState({ loading: true }), 1000);
     }
 
     componentWillUnMount(){
@@ -71,9 +73,13 @@ export class Mainpage extends React.Component {
             </Marker>);
         });
 
+<<<<<<< HEAD
         const position = [47.9210, 106.9204];
 >>>>>>> master
         const test_position = [47.920493, 106.917302];
+=======
+       
+>>>>>>> master
         return (
             <div className="Mainpage">
                 <div class="row main-row">
@@ -88,11 +94,6 @@ export class Mainpage extends React.Component {
                             <TileLayer
                                 url="https://api.minu.mn/tiles/{z}/{x}/{y}?token=daseyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwi"
                             />
-                            <Marker position={test_position}>
-                                <Popup>
-                                    <span>Parliament building</span>
-                                </Popup>
-                            </Marker>
                             <div>{ markers}</div>
                         </Map>
                     </div>

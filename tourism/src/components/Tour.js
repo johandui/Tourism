@@ -34,7 +34,7 @@ export default class Tour extends React.Component{
                 ))
 		return (
         <div>
-				<div class="single-tour-plan" onClick={this.toggle.bind(this)} ref={this.simulateClick}
+				<div class="single-tour-plan" onClick={this.toggle.bind(this)} ref={this.props.count == 0 ? this.simulateClick:""}
                         data-id={this.props.tour.name} data-odd-checker={this.props.count%2}>
                 <div class="price_wrapper">
                     <span class="tour-plan-price">100$</span>

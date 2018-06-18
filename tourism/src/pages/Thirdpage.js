@@ -2,6 +2,7 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
+
 import { Link } from 'react-router-dom';
 
 export class Thirdpage extends React.Component {
@@ -191,3 +192,4 @@ export class Thirdpage extends React.Component {
         );
     }
 }
+moment.locale();
