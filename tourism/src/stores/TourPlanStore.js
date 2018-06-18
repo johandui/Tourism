@@ -4,12 +4,16 @@ class TourPlanStore extends EventEmitter{
 	constructor(props) {
 	  super(props);
 	  this.tours = [];
+	  this.temp = [];
 	}
 	setInit(data){
 		this.tours = data;
 	}
 	getAll(){
 		return this.tours;
+	}
+	getTour(){
+		return this.temp;
 	}
 	createTourPlan(val){
 		this.tours.push(val);
@@ -18,8 +22,8 @@ class TourPlanStore extends EventEmitter{
 	addTourPlan(id, data){
 		var t = this;
 		t.tours[id].tour = [];
-		
 		t.tours[id].tour = data;
+		t.temp = data;
 	}
 	handleActions(action){
 		switch(action.type){

@@ -14,16 +14,19 @@ export function reloadTour(day, money, visited, date){
         }
     })
     .then(function (response) {
-     var data = response.data;
-        dispatcher.dispatch({type: "RECEIVE_DATA", data});
+        dispatcher.dispatch({type: "FETCH_DATA"});
+        setTimeout(()=>{
+            var data = response.data;
+            dispatcher.dispatch({type: "RECEIVE_DATA", data});
+        }, 1);
       })
     .catch(function (error) {
+        dispatcher.dispatch({type: "FETCH_ERROR"});
         console.log(error);
     });
 }
 
 export function reloadCurrentTour(val){
-  console.log(val)
    axios.get('http://tourplanner.orgilconsulting.com/database/DB.php', {
         params: {
             type: "GET_TOURS",
