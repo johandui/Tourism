@@ -32,7 +32,6 @@ class TourPlanStore extends EventEmitter{
 			case "RECEIVE_DATA":
 				action.data.map((count) => {
 					this.tours.push({name: count});
-					
 				});
 				this.emit("change"); break;
 			case "DELETE_TOUR": break;
