@@ -4,7 +4,7 @@ import TourStore from "../stores/TourPlanStore";
 import * as TourActions from "../actions/TourActions";
 import L from 'leaflet'
 import "leaflet-routing-machine";
-
+var routeControl;
 export class Mainpage extends React.Component {
     constructor (props) {
         super(props);
@@ -19,15 +19,26 @@ export class Mainpage extends React.Component {
             routeWayPoints: []
         }
     }
-
+    setWayPoint(){
+        var temp = this;
+        this.state.routeWayPoints = [];
+        
+        this.state.tempTour.map((tour, count) => {
+            temp.state.routeWayPoints.push(L.latLng(tour.lat, tour.lng));
+        });
+        routeControl.setWaypoints(this.state.routeWayPoints);
+    }
     getTours(){
         this.setState({
             tour: TourStore.getAll(),
             tempTour: TourStore.getTour()
-            });
+        });
+        this.setWayPoint();
+    
     }
 
     getTourAtts(e) {
+        console.log("al");
         this.state.tour.map((tour)=>{
              if(tour.name == e.currentTarget.dataset.id){
                 if ((typeof tour.tour) !== 'undefined'){
@@ -38,6 +49,8 @@ export class Mainpage extends React.Component {
                 }
             }
         })
+       this.setWayPoint();
+      
     }
 
     componentWillMount(){
@@ -60,49 +73,37 @@ export class Mainpage extends React.Component {
             maxZoom: 18,
         }).addTo(map);
 
-        var routeControl  = L.Routing.control({
+        routeControl  = L.Routing.control({
             position: 'topleft',
-            waypoints: [
-                L.latLng(47.920762, 106.917276),
-                L.latLng(47.91563, 106.98049),
-                L.latLng(47.91863, 106.98549)
-            ],
         }).on('routesfound', function(e) {
             var routes = e.routes;
             alert('Found ' + routes.length + ' route(s).');
             alert("first route distance: " + e.routes[0].summary.totalDistance);
         }).addTo(map);
 
-        this.state.tempTour.map((currentTourPlan, count) => {
-            this.setState({
-                routeWayPoints: this.state.routeWayPoints.concat(currentTourPlan)
-            });
-            console.log("a");
-        });
-        console.log(this.state.tempTour);
     }
 
     render() {
         var tour_plans = this.state.tour.map((tour, count) => {
-            return <Tour onClick={this.getTourAtts.bind(this)} tour={tour} count={count}/>
+            return <Tour onClick={this.getTourAtts.bind(this)} key={count} tour={tour} count={count}/>
         });
-
-
-
+   
         return (
             <div className="Mainpage">
-                <div class="row main-row">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tour-column">
-                        <div class="answer_section">
+                <div className="row main-row">
+                    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tour-column">
+                        <div className="answer_section">
 
                         </div>
-                        {tour_plans}
+                        {
+                            
+                        (this.state.tour.length > 0) && tour_plans}
                     </div>
                     <div id="mapid" class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 map-column"/>
                 </div>
-                <div class="row main-footer">
-                    <span class="copyright-text">© 2017</span>
-                    <span class="developed-text">Developed by Orgil SEO</span>
+                <div className="row main-footer">
+                    <span className="copyright-text">© 2017</span>
+                    <span className="developed-text">Developed by Orgil SEO</span>
                 </div>
             </div>
         );
